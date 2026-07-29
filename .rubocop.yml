@@ -1,0 +1,14 @@
+inherit_gem:
+  rubocop-espago: sorbet.yml
+
+AllCops:
+  TargetRubyVersion: 3.2
+
+Bundler/GemComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Naming/FileName:
+  Enabled: false
