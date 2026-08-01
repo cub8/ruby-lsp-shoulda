@@ -13,10 +13,9 @@ module RubyLsp
       FRAMEWORK_TAG = 'framework:shoulda'
       CONSTANT_SEGMENT = /\A[A-Z]\w*\z/
 
-      #: (GlobalState) -> void
-      def initialize(global_state)
-        @global_state = global_state
-        @rails = File.exist?(File.join(global_state.workspace_path, 'bin', 'rails')) #: bool
+      #: (rails: bool) -> void
+      def initialize(rails:)
+        @rails = rails
       end
 
       #: (Array[Hash[Symbol, untyped]]) -> Array[String]
@@ -103,8 +102,6 @@ module RubyLsp
         "/^#{Regexp.escape(class_name)}\\##{Regexp.escape("test_: #{context_name} should ")}/"
       end
 
-      # A single example. The method name already carries shoulda's trailing ". ", so we
-      # escape it whole and anchor both ends rather than rebuilding it from parts.
       #: (String, String) -> String
       def example_filter(class_name, method_name)
         "/^#{Regexp.escape(class_name)}\\##{Regexp.escape(method_name)}\\z/"

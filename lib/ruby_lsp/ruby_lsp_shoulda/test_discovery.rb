@@ -12,9 +12,9 @@ module RubyLsp
         @dispatcher = dispatcher
         @uri = uri
 
-        path = uri.to_standardized_path #: as !nil
-        @path = path #: String
-        return unless @path.end_with?('base_test.rb')
+        path = uri.to_standardized_path
+        @path = path #: String?
+        return unless @path&.end_with?('base_test.rb')
 
         @workspace_path = workspace_path #: String
         @group_stack = [] #: Array[::RubyLsp::Requests::Support::TestItem]

@@ -3,7 +3,7 @@
 
 require 'test_helper'
 
-class DiscoveryTest < Minitest::Test
+class TestDiscoveryTest < Minitest::Test
   def test_discovers_should_and_context
     source = <<~RUBY
       class RandomTest < ActiveSupport::TestCase

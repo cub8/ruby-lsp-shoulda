@@ -48,7 +48,8 @@ module RubyLsp
       #: (Array[Hash[Symbol, untyped]]) -> Array[String]
       def resolve_test_commands(items)
         global_state = @global_state #: as !nil
-        CommandResolver.new(global_state).call(items)
+        rails_path = File.join(global_state.workspace_path, 'bin', 'rails')
+        CommandResolver.new(rails: File.exist?(rails_path)).call(items)
       end
 
       # @override

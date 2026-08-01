@@ -9,7 +9,6 @@ require 'ruby_lsp/internal'
 require 'ruby_lsp/test_helper'
 require 'ruby_lsp/ruby_lsp_shoulda/addon'
 
-
 class Minitest::Test
   include RubyLsp::TestHelper
 end
