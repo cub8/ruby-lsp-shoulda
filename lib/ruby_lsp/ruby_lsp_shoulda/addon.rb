@@ -5,6 +5,7 @@ require 'ruby_lsp/addon'
 
 require_relative '../../ruby_lsp_shoulda/version'
 require_relative 'command_resolver'
+require_relative 'name_builder'
 require_relative 'test_discovery'
 
 module RubyLsp

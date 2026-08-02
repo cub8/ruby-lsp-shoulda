@@ -22,7 +22,9 @@ class CommandResolverTest < Minitest::Test
     resolver = RubyLsp::Shoulda::CommandResolver.new(rails: true)
     commands = resolver.call(items)
     assert_equal 1, commands.count
-    assert_filter_matches(commands.first, 'BaseTest', 'test_: Base should check for chaos. ')
+
+    command = commands.first #: as !nil
+    assert_filter_matches(command, 'BaseTest', 'test_: Base should check for chaos. ')
   end
 
   def test_generates_valid_command_based_on_rails_presence
