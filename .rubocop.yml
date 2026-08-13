@@ -2,7 +2,13 @@ inherit_gem:
   rubocop-espago: sorbet.yml
 
 AllCops:
+  inherit_mode:
+    merge:
+      - Exclude
   TargetRubyVersion: 3.2
+  Exclude:
+    # Verbatim copies of another project's test files, used as parser input only.
+    - 'test/fixtures/**/*'
 
 Bundler/GemComment:
   Enabled: false
