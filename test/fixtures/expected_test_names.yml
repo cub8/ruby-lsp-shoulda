@@ -1,0 +1,82 @@
+---
+Admin::NamespaceTest:
+  file: test/integration/admin/namespace_test.rb
+  methods:
+  - 'test_: Admin::Namespace should test inside namespace. '
+  - 'test_: test inside namespace should Big shot. '
+AnotherBaseTest:
+  file: test/integration/another_base_test/basic_test.rb
+  methods: []
+AnotherBaseTest::BasicTest:
+  file: test/integration/another_base_test/basic_test.rb
+  methods:
+  - 'test_: AnotherBaseTest::Basic should check for chaos. '
+  - 'test_: check maths should check if 2+2 is 4. '
+  - 'test_: check maths should check if 3*3 is 9. '
+  - test_driven_by_method
+  - test_normal_Rails_test
+ApplicationTestCase:
+  file: test/integration/own_base_class_test.rb
+  methods: []
+BaseTest:
+  file: test/integration/base_test.rb
+  methods:
+  - 'test_: Base should check for chaos. '
+  - 'test_: check maths should check if 2+2 is 4. '
+  - 'test_: check maths should check if 3*3 is 9. '
+  - 'test_: with setup should see the setup value. '
+DslCoverageTest:
+  file: test/integration/dsl_coverage_test.rb
+  methods:
+  - 'test_: DslCoverage should accept a before option. '
+  - 'test_: DslCoverage should be a before_should at class level. '
+  - 'test_: DslCoverage should be a matcher based should. '
+  - 'test_: DslCoverage should not be a negated matcher. '
+  - 'test_: DslCoverage should still be discovered after nested non-test classes. '
+  - 'test_: inside a context should run before the context setup. '
+  - 'test_: outer inner should run the before proc between parent and current setup. '
+InterpolationTest:
+  file: test/integration/interpolation_test.rb
+  methods:
+  - 'test_: Interpolation should check for HELLO!!. '
+  - 'test_: Interpolation should greet with guten_morgen. '
+  - 'test_: Interpolation should greet with hello. '
+  - 'test_: Interpolation should greet with hi. '
+MixedClassTest:
+  file: test/integration/mixed_class_test.rb
+  methods:
+  - 'test_: MixedClass should check for length. '
+  - 'test_: we are going inside the context should check this number. '
+  - test_driven_by_method
+  - test_normal_Rails_test
+NestedContextTest:
+  file: test/integration/nested_context_test.rb
+  methods:
+  - 'test_: check maths check multiplying should check if 3*3 is 9. '
+  - 'test_: check maths check multiplying should check if 3*3*3 is 27. '
+  - 'test_: check maths check sum should check if 2+2 is 4. '
+  - 'test_: check maths check sum should check if 2+2+8 is 12. '
+NotATestClass:
+  file: test/integration/not_a_test_class_test.rb
+  methods:
+  - 'test_: NotATestClass should check for chaos. '
+  - 'test_: check maths should check if 2+2 is 4. '
+  - 'test_: check maths should check if 3*3 is 9. '
+OwnBaseClassTest:
+  file: test/integration/own_base_class_test.rb
+  methods:
+  - 'test_: OwnBaseClass should check for chaos. '
+  - 'test_: check maths should check if 2+2 is 4. '
+  - 'test_: check maths should check if 3*3 is 9. '
+ReceiverGuardTest:
+  file: test/integration/receiver_guard_test.rb
+  methods:
+  - 'test_: ReceiverGuard should the only real test. '
+SpecialCharactersTest:
+  file: test/integration/special_characters_test.rb
+  methods:
+  - 'test_: SpecialCharacters should hello! HELLO!!! [!@#$%^&*(){}<>???/\:;"|>-_+=''`~]. '
+WidgetTest:
+  file: test/integration/dsl_coverage_test.rb
+  methods:
+  - 'test_: Widget should expose described_type. '

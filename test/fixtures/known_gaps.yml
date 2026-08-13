@@ -1,0 +1,10 @@
+matcher_description:
+  DslCoverageTest:
+    - "test_: DslCoverage should be a matcher based should. "
+    - "test_: DslCoverage should not be a negated matcher. "
+interpolated_name:
+  InterpolationTest:
+    - "test_: Interpolation should check for HELLO!!. "
+    - "test_: Interpolation should greet with guten_morgen. "
+    - "test_: Interpolation should greet with hello. "
+    - "test_: Interpolation should greet with hi. "
