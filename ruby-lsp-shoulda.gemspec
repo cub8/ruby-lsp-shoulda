@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ['tsubait8@gmail.com']
 
   spec.summary = 'Shoulda-context support for Ruby LSP'
-  spec.description = 'TODO: Write a longer description or delete this line.'
+  spec.description = 'This gem adds support for shoulda-context syntax used in test files.'
   spec.homepage = 'https://github.com/cub8/ruby-lsp-shoulda'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.2.0'
